@@ -2,5 +2,5 @@
 title: Contact Us
 description: Contact page
 slug: contact
-templateKey : contactTemplate
+templateKey : contactPage
 ---

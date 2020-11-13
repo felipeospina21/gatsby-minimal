@@ -23,7 +23,7 @@ export default function ContactPageTemplate({
 
 export const ContactPageQuery = graphql`
 	query ContactPage {
-		markdownRemark(frontmatter: { templateKey: { eq: "contactTemplate" } }) {
+		markdownRemark(frontmatter: { templateKey: { eq: "contactPage" } }) {
 			html
 			frontmatter {
 				slug
