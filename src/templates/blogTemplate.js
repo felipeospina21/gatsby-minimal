@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
-export default function Template({
+export default function BlogPostTemplate({
 	data // this prop will be injected by the GraphQL query below.
 }) {
 	const { markdownRemark } = data; // data.markdownRemark holds your post data
@@ -22,14 +22,16 @@ export default function Template({
 	);
 }
 
-export const pageQuery = graphql`
-	query($slug: String!) {
+export const BlogTemplateQuery = graphql`
+	query BlogPost($slug: String!) {
 		markdownRemark(frontmatter: { slug: { eq: $slug } }) {
 			html
 			frontmatter {
+				date(formatString: "MMMM DD, YYYY")
 				slug
 				title
 				description
+				tags
 			}
 		}
 	}

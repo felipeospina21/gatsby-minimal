@@ -5,6 +5,7 @@ description: Implementing Active Class for Links in Next.js
 keywords: next.js active link style
 path: /blog/nextjs-active-link
 slug: nextjs-active-link
+templateKey : blogTemplate
 tags:
   - next.js
   - 前端

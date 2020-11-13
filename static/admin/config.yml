@@ -20,6 +20,7 @@ collections:
     editor:
       preview: false
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blogTemplate"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
@@ -33,11 +34,23 @@ collections:
         label: "Landing Page"
         name: "index"
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "indexTemplate"}
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
       - file: "src/pages/contact/index.md"
         label: "Contact Page"
         name: "contact"
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contactTemplate"}
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+      - file: "src/pages/portfolio/index.md"
+        label: "Portfolio Page"
+        name: "portfolio"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolioTemplate"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
