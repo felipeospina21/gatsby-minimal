@@ -24,7 +24,7 @@ export default function BlogPostTemplate({
 
 export const BlogTemplateQuery = graphql`
 	query BlogPost($slug: String!) {
-		markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+		markdownRemark(fields: { slug: { eq: $slug } }) {
 			html
 			frontmatter {
 				date(formatString: "MMMM DD, YYYY")

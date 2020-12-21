@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 			),
 			context   : {
 				// additional data can be passed via context
-				slug        : node.frontmatter.slug,
+				slug        : node.fields.slug,
 				templateKey : node.frontmatter.templateKey
 			}
 		});
