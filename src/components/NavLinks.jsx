@@ -62,7 +62,7 @@ function NavLinks({ toggleNav }) {
         </Link>
       </li>
       <li>
-        <Link to="/portafolio" onClick={toggleNav}>
+        <Link to="/portfolio" onClick={toggleNav}>
           Portafolio
         </Link>
       </li>
@@ -72,7 +72,7 @@ function NavLinks({ toggleNav }) {
         </Link>
       </li>
       <li>
-        <Link to="/contacto" onClick={toggleNav}>
+        <Link to="/contact" onClick={toggleNav}>
           Contacto
         </Link>
       </li>

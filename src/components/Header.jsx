@@ -4,10 +4,12 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import { ImPower as LogoIcon } from "react-icons/im"
 import { FaBars as MenuIcon } from "react-icons/fa"
 import { FaTimes as CloseIcon } from "react-icons/fa"
-import styled, {css} from "styled-components"
-
+import styled, { css } from "styled-components"
+import { breakpoints } from "../styles/styles"
 
 import NavLinks from "./NavLinks"
+
+const { screenMd, screenL } = breakpoints
 
 const HeaderContainer = styled.div`
   position: -webkit-sticky;
@@ -29,6 +31,11 @@ const Logo = styled(LogoIcon)`
   margin: 0.7em 1em;
   font-size: 1.5rem;
   color: var(--clr-contrast);
+
+  @media screen and (min-width: ${screenL}) {
+    max-height: 100px;
+    width: 250px;
+  }
 `
 const IconStyle = css`
   font-size: 1.5rem;
@@ -41,12 +48,16 @@ const IconStyle = css`
   &:focus {
     outline: none;
   }
+
+  @media screen and (min-width: ${screenMd}) {
+    display: none;
+  }
 `
 const CloseBtn = styled(CloseIcon)`
-	${IconStyle}
+  ${IconStyle}
 `
 const MenuBtn = styled(MenuIcon)`
-	${IconStyle}
+  ${IconStyle}
 `
 
 const Header = () => {

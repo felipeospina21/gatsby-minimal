@@ -5,7 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 	const { createPage } = actions;
 	const result = await graphql(`
       {
-        allMarkdownRemark(
+        allMdx(
           limit: 1000
         ) {
           edges {
@@ -29,7 +29,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 		return;
 	}
 
-	result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+	result.data.allMdx.edges.forEach(({ node }) => {
 		createPage({
 			path      : node.fields.slug,
 			component : path.resolve(
@@ -47,12 +47,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 // Create Page Slug
 exports.onCreateNode = ({ node, getNode, actions }) => {
 	const { createNodeField } = actions;
-	if (node.internal.type === `MarkdownRemark`) {
+	if (node.internal.type === `Mdx`) {
 		const slug = createFilePath({ node, getNode, basePath: `pages` });
 		createNodeField({
 			node,
 			name  : `slug`,
-			value : slug
+			value : `/${slug}`
 		});
 	}
 };
