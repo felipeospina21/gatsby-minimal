@@ -1,4 +1,5 @@
 ---
+templateKey: indexPage
 title: Bienvenido
 description: Página de inicio
 heroText: Hola !!
