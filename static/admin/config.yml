@@ -24,16 +24,17 @@ collections:
       - { label: "Dirección", name: "address", widget: "string" }
       - { label: "Ciudad / País", name: "city", widget: "string" }
       - { label: "Teléfono", name: "phone", widget: "string" }
-  - name: "services"
-    label: "Servicios"
-    folder: "content/servicios"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Nombre", name: "title", widget: "string" }
-      - { label: "Descripción", name: "description", widget: "text" }
-      - { label: "Imagen", name: "serviceImg", widget: "image" }
+
+  # - name: "services"
+  #   label: "Servicios"
+  #   folder: "content/servicios"
+  #   create: true
+  #   editor:
+  #     preview: false
+  #   fields:
+  #     - { label: "Nombre", name: "title", widget: "string" }
+  #     - { label: "Descripción", name: "description", widget: "text" }
+  #     - { label: "Imagen", name: "serviceImg", widget: "image" }
 
   - name: "blog"
     label: "Blog"
@@ -62,7 +63,6 @@ collections:
           - { label: "Texto Heroe", name: "heroText", widget: "string" }
           - { label: "Imagen Heroe", name: "heroImg", widget: "image" }
           - { label: "Descripción", name: "description", widget: "text" }
-          - { label: "Servicios", name: "services", widget: "relation", collection: "services",search_fields: ["title"], value_field: "title", multiple: true}
 
       - file: "src/pages/contact/index.md"
         label: "Contact Page"

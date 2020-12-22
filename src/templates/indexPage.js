@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Hero from '../components/Hero'
+import Excerpt from '../components/Excerpt'
+import Services from '../components/Services'
 
 const IndexPageTemplate = ({ data }) => {
 	const { markdownRemark } = data;
@@ -12,7 +14,8 @@ const IndexPageTemplate = ({ data }) => {
 		<Layout>
 			<SEO title={frontmatter.title} description={frontmatter.description} />
 			<Hero frontmatter={frontmatter}/>
-	
+			<Excerpt frontmatter={frontmatter}/>
+			<Services/>
 		</Layout>
 	);
 };
