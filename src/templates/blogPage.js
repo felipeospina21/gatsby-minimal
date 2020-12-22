@@ -7,8 +7,7 @@ import PostLink from '../components/PostLink';
 import { graphql } from 'gatsby';
 
 const BlogPageTemplate = ({ data: { allMarkdownRemark: { edges } } }) => {
-	// const { markdownRemark } = data;
-	// const { frontmatter, html } = markdownRemark;
+
 	return (
 		<Layout>
 			<SEO title='Blog' />
