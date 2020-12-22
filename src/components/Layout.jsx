@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 
 import Header from "./Header"
-import Footer from './Footer'
+import Footer from "./Footer"
 
 const GlobalStyle = createGlobalStyle`
   :root{
@@ -28,9 +28,6 @@ const GlobalStyle = createGlobalStyle`
     overflow: auto;
     margin: 0;
     ${"" /* background-color: var(--clr-darker-blue); */}
-  }
-  main{
-    padding: 0.5em;
   }
   ul {
     list-style-type: none;
@@ -71,7 +68,7 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Footer/>
+      <Footer />
     </>
   )
 }

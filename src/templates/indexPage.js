@@ -2,18 +2,17 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Hero from '../components/Hero'
 
 const IndexPageTemplate = ({ data }) => {
 	const { markdownRemark } = data;
-	const { frontmatter, html } = markdownRemark;
+	const { frontmatter } = markdownRemark;
 
 	return (
 		<Layout>
 			<SEO title={frontmatter.title} description={frontmatter.description} />
-			<div className=''>
-				<h2 className=''>{frontmatter.title}</h2>
-				<div className='' dangerouslySetInnerHTML={{ __html: html }} />
-			</div>
+			<Hero frontmatter={frontmatter}/>
+	
 		</Layout>
 	);
 };
@@ -26,6 +25,9 @@ export const IndexPageQuery = graphql`
 			html
 			frontmatter {
 				title
+				heroImg
+				heroText
+				description
 			}
 		}
 	}

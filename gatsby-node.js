@@ -14,7 +14,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 								slug
 							}
               frontmatter {
-								slug
 								templateKey
               }
             }
