@@ -1,10 +1,16 @@
 import React from "react"
 import styled from "styled-components"
+import {
+  AiOutlineLinkedin,
+  AiOutlineInstagram,
+  AiOutlineFacebook,
+  AiOutlineYoutube,
+} from "react-icons/ai"
 
 const FooterContainer = styled.div`
   display: grid;
   grid-template: 1fr / 1fr 1fr;
-  background-color: var(--clr-lighter-blue);
+  background-color: var(--clr-primary-light);
   margin: 0.5rem auto 0 auto;
   min-height: 60px;
   padding: 0.5rem;
@@ -15,6 +21,13 @@ const SocialContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
+
+  & svg {
+    color: var(--clr-contrast);
+    width: 1.5em;
+    height: 1.5em;
+    margin: auto 0.5em;
+  }
 `
 const InfoContainer = styled.div`
   color: white;
@@ -33,7 +46,12 @@ const Footer = () => {
         <p>contacto</p>
         <p>telefono</p>
       </InfoContainer>
-      <SocialContainer>insta logo</SocialContainer>
+      <SocialContainer>
+        <AiOutlineLinkedin />
+        <AiOutlineFacebook />
+        <AiOutlineInstagram />
+        <AiOutlineYoutube />
+      </SocialContainer>
     </FooterContainer>
   )
 }

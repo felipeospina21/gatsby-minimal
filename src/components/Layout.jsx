@@ -2,14 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
-
 import Header from "./Header"
 import Footer from "./Footer"
 
 const GlobalStyle = createGlobalStyle`
   :root{
-    --clr-darker-blue: #242633;
-    --clr-lighter-blue: #3e4254;
+    --clr-primary-dark: #242633;
+    --clr-primary-light: #3e4254;
     --clr-contrast: #e3a93b;
     --clr-text:#fffeff;
     --main-font: 'Montserrat', sans-serif;

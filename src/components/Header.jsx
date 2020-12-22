@@ -22,7 +22,7 @@ const HeaderContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--clr-lighter-blue);
+  background-color: var(--clr-primary-light);
 `
 const Logo = styled(LogoIcon)`
   display: flex;
