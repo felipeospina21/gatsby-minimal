@@ -33,15 +33,5 @@ export const IndexPageQuery = graphql`
         description
       }
     }
-   
   }
 `
-
- // file(relativePath: { eq: heroImgRelPath }) {
-    //   childImageSharp {
-    //     # Specify the image processing specifications right in the query.
-    //     fluid {
-    //       ...GatsbyImageSharpFluid
-    //     }
-    //   }
-    // }
