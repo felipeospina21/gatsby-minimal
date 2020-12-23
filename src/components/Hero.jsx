@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+// import {graphql, useStaticQuery} from 'gatsby'
+// import Img from 'gatsby-image'
 import Image from "./Image"
 
 const HeroContainer = styled.div`
@@ -7,6 +9,7 @@ const HeroContainer = styled.div`
   height: 40vh;
   position: relative;
   background-color: var(--clr-primary-dark);
+  overflow: hidden;
 `
 const HeroText = styled.h1`
   text-transform: uppercase;
@@ -22,11 +25,11 @@ const HeroText = styled.h1`
   width: 100%;
   color: var(--clr-text);
 `
-const HeroImg = styled(Image)`
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-`
+// const HeroImg = styled(Image)`
+//   width: 100%;
+//   height: 100%;
+//   opacity: 0.5;
+// `
 const HeroBtnContainer = styled.div`
   width: 100%;
   position: absolute;
@@ -49,9 +52,12 @@ const Hero = ({ frontmatter }) => {
   const { heroImg, heroText } = frontmatter
   const heroImgRelPath = heroImg.split("/img/")[1]
 
+
+
   return (
     <HeroContainer>
-      <HeroImg src={heroImgRelPath} alt="heroimg" />
+      <Image src={heroImgRelPath} alt="heroimg" />
+      {/* <Img fluid={data.file.childImageSharp.fluid} alt='an image'/> */}
       <HeroText>{heroText}</HeroText>
       <HeroBtnContainer>
         <HeroBtn>Call to action</HeroBtn>
