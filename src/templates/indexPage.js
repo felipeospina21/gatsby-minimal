@@ -5,6 +5,7 @@ import SEO from "../components/SEO"
 import Hero from "../components/Hero"
 import Excerpt from "../components/Excerpt"
 import Services from "../components/Services"
+import News from "../components/News"
 
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -16,6 +17,7 @@ const IndexPageTemplate = ({ data }) => {
       <Hero frontmatter={frontmatter} />
       <Excerpt frontmatter={frontmatter} />
       <Services />
+			<News/>
     </Layout>
   )
 }
