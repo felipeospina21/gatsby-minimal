@@ -6,6 +6,7 @@ import Hero from "../components/Hero"
 import Excerpt from "../components/Excerpt"
 import Services from "../components/Services"
 import News from "../components/News"
+import ContactForm from '../components/ContactForm'
 
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -18,6 +19,7 @@ const IndexPageTemplate = ({ data }) => {
       <Excerpt frontmatter={frontmatter} />
       <Services />
 			<News/>
+			<ContactForm/>
     </Layout>
   )
 }
